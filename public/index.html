@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Sneaker Hype</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+          <h1>SNEAKER <span img src="./images/running-shoe.png"></span> HYPE</h1>
+          <p>GWU Bootcamp's #1 Rated Sneaker Review Site</p>
+
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-review" href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-login" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-sign" href="sign-up.html">Sign-Up</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
+    <div class="container">
+      <h3 id="searchtitle">Search For A Shoe To Review</h3>
+      <div class="jumbotron">
+          <form>
+            <div class="form-group">
+              <label for="fname" class="home-labels"><b>Shoe Brand</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="brand"
+                placeholder="Nike"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lname" class="home-labels"><b>Shoe Name</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Air Jordan"
+              />
+            </div>
+            <div class="form-group">
+              <label for="InputEmail" class="home-labels"><b>Release Year</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="releaseYear"
+                placeholder="2021"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
