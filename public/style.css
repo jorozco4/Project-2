@@ -22,3 +22,15 @@ h1 {
 .jumbotron {
     background-color: #800020;
 }
+
+#searchtitle {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.home-labels {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: gold
+}
