@@ -1,3 +1,28 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 85px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    color: gold;
+}
+
+.jumbotron p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#navbarNav {
+    justify-content: center;
+}
+
+.jumbotron {
+    background-color: #800020;
+}
+
 .card {
     margin: 0;
     position: absolute;
@@ -9,4 +34,12 @@
 
 .btn {
     margin-top: 10px;
+}
+
+.col-sm {
+    color: white;
+}
+
+h4 {
+    color: white;
 }
