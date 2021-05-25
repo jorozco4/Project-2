@@ -51,4 +51,28 @@ h4 {
 
 .sign-up {
     margin-top: 50px;
+    margin-top: 50px
+}
+
+#shoe-img {
+  margin-top: 115px ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#details {
+  margin-top: 400px ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#list {
+    list-style-type: none;
 }
