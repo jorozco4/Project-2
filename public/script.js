@@ -38,7 +38,7 @@ function renderSneakers() {
     console.log(img.src)
     $("#shoe-img").append(img)
     $("#shoe-name").html(data.results[0].shoe)
-	$("#relDate").html("Release Date: " + data.results[0].releaseDate)
+	  $("#relDate").html("Release Date: " + data.results[0].releaseDate)
     $("#retailPrice").html("Current Costs: $" + data.results[0].retailPrice)
     $("#styleID").html("Style ID: " + data.results[0].styleId)
 })
