@@ -19,8 +19,13 @@ h1 {
     justify-content: center;
 }
 
-.jumbotron {
+.card-body {
     background-color: #800020;
+}
+
+label {
+    color: gold;
+    font-weight: bold;
 }
 
 .card {
@@ -45,5 +50,5 @@ h4 {
 }
 
 .sign-up {
-    margin-top: 50px
+    margin-top: 50px;
 }
