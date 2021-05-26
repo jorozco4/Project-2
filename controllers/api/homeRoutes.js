@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const { Post, User, Comment } = require("../../models");
+const { Review, User, Comment } = require("../../models");
 
 router.get("/", async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const postData = await Post.findAll({
+    const reviewData = await Review.findAll({
       include: [User],
     });
 
     // Serialize data so the template can read it
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     // res.render("homepage", { posts });
