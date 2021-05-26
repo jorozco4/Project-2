@@ -23,14 +23,13 @@ h1 {
   background-color: #800020;
 }
 
-
 .card-body {
-    background-color: #800020;
+  background-color: #800020;
 }
 
 label {
-    color: gold;
-    font-weight: bold;
+  color: gold;
+  font-weight: bold;
 }
 
 .card {
@@ -55,8 +54,8 @@ h4 {
 }
 
 .sign-up {
-    margin-top: 50px;
-    margin-top: 50px
+  margin-top: 50px;
+  margin-top: 50px;
 }
 
 #shoe-img {

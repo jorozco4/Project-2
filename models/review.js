@@ -19,21 +19,21 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {  
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id',
-            onDelete: 'cascade'
-        },
-    }
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+        onDelete: "cascade",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: "review",
   }
 );
 
