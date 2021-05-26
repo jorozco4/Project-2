@@ -12,7 +12,7 @@ const seedAll = async () => {
     console.log('\n----- USERS SEEDED -----\n');
   
   await seedReview();
-    console.log('\n----- POSTS SEEDED -----\n');
+    console.log('\n----- REVIEWS SEEDED -----\n');
 
   await seedComments();
     console.log('\n----- COMMENTS SEEDED -----\n');
