@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 85px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    color: gold;
+}
+
+.jumbotron p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#navbarNav {
+    justify-content: center;
+}
+
+.card-body {
+    background-color: #800020;
+}
+
+label {
+    color: gold;
+    font-weight: bold;
+}
+
+.card {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.col-sm {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+.sign-up {
+    margin-top: 50px;
+    margin-top: 50px
+}
+
+#shoe-img {
+  margin-top: 115px ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#details {
+  margin-top: 400px ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#list {
+    list-style-type: none;
+}

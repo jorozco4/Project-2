@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 85px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    color: gold;
+}
+
+.jumbotron p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#navbarNav {
+    justify-content: center;
+}
+
+.jumbotron {
+    background-color: #800020;
+}
+
+#searchtitle {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.home-labels {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: gold
+}
