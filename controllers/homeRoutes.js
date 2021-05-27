@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Review, User, Comment } = require("../models");
+const { Review, User, Product } = require("../models");
 
 // router.get("/", async (req, res) => {
 //   try {
@@ -18,23 +18,22 @@ const { Review, User, Comment } = require("../models");
 //   }
 // });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
-router.get('/signup', (req, res) => {
+router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('signup');
+  res.render("signup");
 });
-
 
 module.exports = router;
