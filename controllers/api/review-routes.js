@@ -1,21 +1,13 @@
 const router = require("express").Router();
-const { Review, User, Comment } = require("../../models");
+const { Review, User, Product } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
     const data = await Review.findAll({
-      attributes: ["id", "review_title", "review"],
+      attributes: ["id", "review", "rating"],
       order: [["id", "DESC"]],
       include: [
-        {
-          model: Comment,
-          attributes: ["id", "comment", "review_id", "user_id"],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
-        },
         {
           model: User,
           attributes: ["username"],
