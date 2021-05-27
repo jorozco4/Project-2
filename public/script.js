@@ -8,9 +8,9 @@ const postReview = async (e) => {
   console.log(e);
   e.preventDefault();
   const reviewBody = {
-    review_title: $("#review_button").val(),
     review: $("#review").val(),
-    user_id: 1,
+    rating: $("#rating").val(),
+    // user_id: 1,
   };
   await fetch("http://localhost:3001/api/review", {
     method: "POST",
