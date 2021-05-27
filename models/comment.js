@@ -15,29 +15,29 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    review_id: {  
+    review_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: 'review',
-          key: 'id',
-          onDelete: 'cascade'
+        model: "review",
+        key: "id",
+        onDelete: "cascade",
       },
     },
-    user_id: {  
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: 'user',
-          key: 'id',
-          onDelete: 'cascade'
+        model: "user",
+        key: "id",
+        onDelete: "cascade",
+      },
     },
-  }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: "comment",
   }
 );
 
