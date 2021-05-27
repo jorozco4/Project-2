@@ -5,27 +5,14 @@ class Review extends Model {}
 
 Review.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    review_title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     review: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
+
+    rating: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-        onDelete: "cascade",
-      },
+      allowNull: false,
     },
   },
   {
@@ -33,7 +20,7 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "review",
+    modelName: "Review",
   }
 );
 
