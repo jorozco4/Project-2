@@ -2,28 +2,28 @@ const { Review } = require("../models");
 
 const reviewData = [
   {
-    review_title: "TEST",
     review: "TEST",
+    rating: 1,
     user_id: 1,
   },
   {
-    review_title: "TEST",
     review: "TEST",
+    rating: 1,
     user_id: 2,
   },
   {
-    review_title: "TEST",
     review: "TEST",
+    rating: 1,
     user_id: 3,
   },
   {
-    review_title: "TEST",
     review: "TEST",
+    rating: 1,
     user_id: 4,
   },
   {
-    review_title: "TEST",
     review: "TEST",
+    rating: 1,
     user_id: 5,
   },
 ];
