@@ -5,17 +5,28 @@ class Product extends Model {}
 
 Product.init(
   {
+    id:  {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     brand: {
       type: DataTypes.STRING,
+      allowNull: false
     },
-
-    model: {
+    name: {
       type: DataTypes.STRING,
+      allowNull: false
     },
-
     year: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
+    // count: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true
+    // }
   },
   {
     sequelize,

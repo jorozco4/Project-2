@@ -23,9 +23,6 @@ h1 {
   background-color: #800020;
 }
 
-.card-body {
-  background-color: #800020;
-}
 
 label {
   color: gold;
@@ -33,7 +30,7 @@ label {
 }
 
 .card {
-  margin: 0;
+  margin-top: 120px; 
   position: absolute;
   top: 50%;
   left: 50%;

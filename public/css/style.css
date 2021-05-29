@@ -34,3 +34,7 @@ h1 {
     font-size: 18px;
     color: gold
 }
+
+.card-body {
+    background-color: #800020;
+}
