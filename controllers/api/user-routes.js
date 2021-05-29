@@ -53,15 +53,15 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
 
-      res.status(200).json(user);
+      res.status(200).json({user: user, message: 'You are logged in!'});
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
 router.post("/login", async (req, res) => {
+  console.log (req.body)
   try {
     const data = await User.findOne({
       where: {
@@ -72,16 +72,16 @@ router.post("/login", async (req, res) => {
     if (!data) {
       res
         .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+        .json({ message: "Incorrect username. Please try again!" });
       return;
     }
 
-    const validPassword = await data.checkPassword(req.body.password);
+    const check2 = await data.checkPassword(req.body.password);
 
-    if (!validPassword) {
+    if (!check2) {
       res
         .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+        .json({ message: "Incorrect password. Please try again!" });
       return;
     }
 
