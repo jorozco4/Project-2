@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Product } = require("../../models");
+const { Product, Review } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -11,35 +11,38 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", withAuth, (req, res) => {
-  if (req.session) {
-    const body = req.body;
-    Product.create({
-      ...body, 
-      user_id: req.session.user_id,
-    })
-      .then((data) => res.status(200).json(data))
-      .catch((err) => {
-        console.log(err);
-        res.status(400).json(err);
-      });
+router.get("/:id", async (req, res) => {
+  try {
+    const product = await Product.findByPk(req.params.id, {
+      include: [{ model: Review }],
+    });
+    res.render("review", product.get({ plain: true }));
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.post("/new", async (req, res) => {
   try {
-    const data = await Product.destroy({
-      where: {
-        id: req.params.id,
-      },
+    const data = Product.create({
+      brand: req.body.brand,
+      name: req.body.name,
+      year: req.body.year,
     });
 
-    if (!data) {
-      res.status(404).json({ message: "No comment located with that id!" });
-      return;
-    }
-
     res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post("/", async (req, res) => {
+  try {
+    const productData = await Product.findOne({
+      where: req.body,
+      include: [{ model: Review }],
+    });
+    res.json({ id: productData.dataValues.id });
   } catch (err) {
     res.status(500).json(err);
   }
