@@ -18,26 +18,12 @@ function renderSneakers() {
       $("#shoe-img").append(img);
       $("#shoe-name").html(data.results[0].shoe);
       $("#relDate").html("Release Date: " + data.results[0].releaseDate);
-      $("#retailPrice").html("Current Costs: $" + data.results[0].retailPrice);
+      $("#retailPrice").html("Current Cost: $" + data.results[0].retailPrice);
       $("#styleID").html("Style ID: " + data.results[0].styleId);
     })
     .catch((err) => {
       console.error(err);
     });
 }
-
-const renderReview = async () => {
-  await fetch ('1', {
-    method: "GET",
-    body: JSON.stringify({review_title}),
-      headers: { "Content-Type": "application/json" }
-  })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
-  })
-}
-
-
 renderSneakers();
-renderReview()
+

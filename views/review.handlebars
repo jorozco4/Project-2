@@ -54,29 +54,26 @@
           <li id="retailPrice"></li>
           <li id="styleID"></li>
         </ul>
-      </div>
-</div>
-<div class ="container">
-  <div class="row-3">
-    <h3>Review</h3>
-  </div>
-</div> --}}
-          {{!-- <h2>Place your review</h2>
+
+        <div class="container-review-form">
+          <h2>Place your review</h2>
           <form>
-            <input
-              type="text"
-              placeholder="What is your Rating 1-5"
-              id="rating"
-            />
-            <textarea placeholder="Leave us a review" id="review">
-            </textarea>
-            <div class="btn">
-              <button id="review-submit">Submit Review</button>
-              <button id="clear" href="#">Cancel</button> --}}
-            {{!-- </div>
-          </form> --}}
-      
-    {{!-- <h4>Review</h4>
+          <div class="form-group">
+            <label for="input">Rating Score</label>
+            <input type="text" class="form-control" id="ratingscore" placeholder="Please rate 1-5">
+         </div>
+         <div class="form-group">
+            <label for="Textarea">Write a Review:</label>
+            <textarea class="form-control" id="Textarea1" rows="3"></textarea>
+         </div>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>Review</h4>
+
     <div class="rate">
       {{#each Reviews}}
         <div>

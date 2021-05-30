@@ -33,16 +33,16 @@
   color: #fff;
 }
 
+#shoe-img {
+  margin-top: 180px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
 
 #details {
-  color: white
+  margin-top: 600px;
+  text-align: center;
 }
-
-.box-wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
 
