@@ -33,11 +33,15 @@
   color: #fff;
 }
 
-#shoe-image {
-  margin: 0;
-  position: absolute;
+#shoe-img {
+  margin-top: 180px;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
+}
+
+#details {
+  margin-top: 600px;
+  text-align: center;
 }

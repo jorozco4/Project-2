@@ -22,9 +22,9 @@ const formSubmit = async (e) => {
       alert(response.statusText);
     }
 
-    // const userInfo = { brand, name, year };
-    // localStorage.setItem("userInfo", JSON.stringify(userInfo));
-    // window.location.href = "/review";
+    const userInfo = { brand, name, year };
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+    window.location.href = "/review";
   }
 };
 
