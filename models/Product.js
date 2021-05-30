@@ -22,18 +22,14 @@ Product.init(
     year: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    // count: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true
-    // }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Product",
+    modelName: 'product',
   }
 );
 

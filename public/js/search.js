@@ -4,6 +4,9 @@ const formSubmit = async (e) => {
   const name = document.querySelector("#name").value.trim();
   const year = document.querySelector("#releaseYear").value.trim();
 
+  const userInfo = { brand, name, year };
+  localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
   if (!brand && !name && !year) {
     confirm("Please fill out all fields!");
   } else if (brand && name && year) {
@@ -18,14 +21,32 @@ const formSubmit = async (e) => {
 
     if (response.ok) {
       window.location.href = "/api/product/" + resJson.id;
+    } else if (!response.ok) {
+      const newAdd = await fetch("api/product/new", {
+        method: "POST",
+        body: JSON.stringify({ brand, name, year }),
+        headers: { "Content-Type": "application/json" }
+    });
+    
+    if (newAdd) {
+      const res = await fetch("api/product/", {
+              method: "POST",
+              body: JSON.stringify({ brand, name, year }),
+              headers: { "Content-Type": "application/json" },
+            })
+    
+    const newResJson = await res.json()
+    
+    if (res.ok) {
+    window.location.href = "/api/product/" + newResJson.id;    
     } else {
-      alert(response.statusText);
+    alert(res.statusText)
+    }
+    }
     }
 
-    const userInfo = { brand, name, year };
-    localStorage.setItem("userInfo", JSON.stringify(userInfo));
-    window.location.href = "/review";
   }
 };
+
 
 document.querySelector(".search").addEventListener("submit", formSubmit);

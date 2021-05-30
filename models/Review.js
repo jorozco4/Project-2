@@ -11,6 +11,10 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    review_title:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     review: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,16 +26,16 @@ Review.init(
     product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Product',
+        model: 'product',
         key: 'id',
-      }
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
-      }
+      },
     },
   },
   {
@@ -39,7 +43,7 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Review",
+    modelName: "review",
   }
 );
 
