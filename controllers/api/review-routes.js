@@ -22,34 +22,38 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const data = await Review.findOne({
-      where: {
-        id: req.params.id,
-      },
-      attributes: ["id", "review_title", "review"],
-      include: [
-        {
-          model: Comment,
-          attributes: ["id", "comment", "review_id", "user_id"],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
-        },
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
+    const res = await Review.findByPk(req.params.id, {
+      include: [{ model: User }],
     });
-    if (!data) {
-      res.status(404).json({ message: "No post found with this id" });
-    }
-    res.status(200).json(data);
+    res.render(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// router.get("/:id", async (req, res) => {
+//   try {
+//     const data = await Review.findOne({
+//       where: {
+//         id: req.params.id,
+//       },
+//       attributes: ["id", "review_title", "review"],
+//       order: [["id", "DESC"]],
+//       include: [
+//         {
+//          model: User,
+//          attributes: ["username"],
+//         },
+//       ],
+//     });
+//     if (!data) {
+//       res.status(404).json({ message: "No post found with this id" });
+//     }
+//     res.status(200).json(data);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // TODO - Insert withAuth back in when it works
 router.post("/", (req, res) => {

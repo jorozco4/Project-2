@@ -13,33 +13,33 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-  User.findOne({
-    attributes: { exclude: ["password"] },
-    where: {
-      id: req.params.id,
-    },
-    include: [
-      {
-        model: Review,
-        attributes: ["id", "review_title", "review"],
-      },
-      {
-        model: Comment,
-        attributes: ["id", "comment"],
-        include: {
-          model: Review,
-          attributes: ["review_title", "review"],
-        },
-      },
-    ],
-  })
-    .then((data) => res.json(data))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get("/:id", (req, res) => {
+//   User.findOne({
+//     attributes: { exclude: ["password"] },
+//     where: {
+//       id: req.params.id,
+//     },
+//     include: [
+//       {
+//         model: Review,
+//         attributes: ["id", "review_title", "review"],
+//       },
+//       {
+//         model: Comment,
+//         attributes: ["id", "comment"],
+//         include: {
+//           model: Review,
+//           attributes: ["review_title", "review"],
+//         },
+//       },
+//     ],
+//   })
+//     .then((data) => res.json(data))
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.post("/", async (req, res) => {
   try {
