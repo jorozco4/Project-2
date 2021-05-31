@@ -18,6 +18,7 @@ const formSubmit = async (e) => {
     });
 
     const resJson = await response.json();
+    console.log(resJson)
 
     if (response.ok) {
       window.location.href = "/product/" + resJson.id;
