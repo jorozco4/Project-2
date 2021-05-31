@@ -1,3 +1,8 @@
+body {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
 .rating {
   float: left;
   width: 300px;
@@ -34,15 +39,17 @@
 }
 
 #shoe-img {
-  margin-top: 180px;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  float: left;
 }
 
 #details {
-  margin-top: 600px;
-  text-align: center;
+  float: left;
+  font-size: 12px;
+  padding: 11%;
+  margin-left: -125px;
+  color: #fff;
 }
 
+#box4 {
+  float: right;
+}
