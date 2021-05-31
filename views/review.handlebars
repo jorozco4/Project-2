@@ -1,110 +1,63 @@
-<div class="box-wrapper">
-        <div id="box1">
-            <h4 id="shoe-name">{{name}}</h4>
-        </div>  
-        <div id="box3">
-            <div id="shoe-img"></div>
-        </div>
-           <div id="box4">
-                <h4>Review</h4>
-                  <form class="newReview">
-                    <div class="rate" id="stars">                      
-                      <input class="stars" type="radio" id="star5" name="rating" value="5" />
-                      <label for="star5" title="5 stars"></label>
-                      <input href="#" class="stars" type="radio" id="star4" name="rating" value="4" />
-                      <label for="star4" title="4 stars"></label>
-                      <input  href="#" class="stars" type="radio" id="star3" name="rating" value="3" />
-                      <label for="star3" title="3 stars"></label>
-                      <input href="#" class="stars" type="radio" id="star2" name="rating" value="2" />
-                      <label for="star2" title="2 stars"></label>
-                      <input  href="#" class="stars" type="radio" id="star1" name="rating" value="1" />
-                      <label for="star1" title="1 star"></label>
-                    </div>
-                    <div class="form-group">
-                      <input class="form-control" id="review_title" name="review_title" rows="1" placeholder="Title" required></input>
-                      <br>
-                      <input class="form-control" id="review" name="review" placeholder="Review" required></input>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Review</button> 
-                  </form>
-                <br>
-                <h4>User Reviews</h4>
-                <div class="container" id="pullReviews">
-                  {{#each product.reviews as |product_review|}}
-                  <section class="card">
-                    <header>{{review_title}}</header>
-                    <div class="card-body">
-                      <p>{{review}}</p>
-                      <p>By:{{user.username}}</p>
-                    </div>
-                  </section>
-                  {{/each}}
-                </div>
-            </div>
-            <div id="details">
-                <h5>Details</h5>
-                <ul id="list">
-                  <li id="relDate"></li>
-                  <li id="retailPrice"></li>
-                  <li id="styleID"></li>
-                </ul>
-            </div>
-</div>
-    
-
-{{!-- <div class="container">
-  <div class="row">
-    <h4 id="shoe-name">{{name}}</h4>
-  </div>
-</div>
 <div class="container">
-  <div class="row">
-    <div id="shoe-img"></div>
-      <div id="details">
-        <h5>Details</h5>
-        <ul id="list">
-          <li id="relDate"></li>
-          <li id="retailPrice"></li>
-          <li id="styleID"></li>
-        </ul>
-
-        <div class="container-review-form">
-          <h2>Place your review</h2>
-          <form>
-          <div class="form-group">
-            <label for="input">Rating Score</label>
-            <input type="text" class="form-control" id="ratingscore" placeholder="Please rate 1-5">
-         </div>
-         <div class="form-group">
-            <label for="Textarea">Write a Review:</label>
-            <textarea class="form-control" id="Textarea1" rows="3"></textarea>
-         </div>
-         </form>
-        </div>
+  <div id="box1">
+    <h4 id="shoe-name">{{name}}</h4>
+  </div>       
+    <div id="box2">
+      <div id="shoe-img"></div>
+      <div id="shoe-btn">
+        <a href="#" id="back" class="previous round">&#8249;</a>
+        <a href="#" id="forward" class="next round">&#8250;</a>
       </div>
     </div>
-  </div>
-  <div>
-    <h4>Review</h4>
-
-    <div class="rate">
-      {{#each Reviews}}
-        <div>
-          {{this.review}}
-          <p>{{this.rating}}</p>
+    <div id="details">
+      <h4>Details</h4>
+      <ul id="list">
+        <li id="relDate"></li>
+        <li id="retailPrice"></li>
+        <li id="styleID"></li>
+      </ul>
+    </div>
+  <br>
+  <h4>Sumbit Review</h4>
+  <div id="box3">
+      <form class="newReview">
+        <div class="rate" id="stars">                      
+          <input class="stars" type="radio" id="star5" name="rating" value="5" />
+          <label for="star5" title="5 stars"></label>
+          <input class="stars" type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars"></label>
+          <input  class="stars" type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars"></label>
+          <input class="stars" type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars"></label>
+          <input class="stars" type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star"></label>
         </div>
-      {{/each}} --}}
-      {{! <input type="radio" id="star5" name="rate" value="5" />
-      <label for="star5" title="text">5 stars</label>
-      <input type="radio" id="star4" name="rate" value="4" />
-      <label for="star4" title="text">4 stars</label>
-      <input type="radio" id="star3" name="rate" value="3" />
-      <label for="star3" title="text">3 stars</label>
-      <input type="radio" id="star2" name="rate" value="2" />
-      <label for="star2" title="text">2 stars</label>
-      <input type="radio" id="star1" name="rate" value="1" />
-      <label for="star1" title="text">1 star</label> }}
-
+        <div class="form-group">
+          <input class="form-control" id="review_title" name="review_title" rows="1" placeholder="Title" required></input>
+          <br>
+          <input class="form-control" id="review" name="review" placeholder="Review" required></input>
+          <button type="submit" class="btn btn-primary">Submit Review</button> 
+        </div>
+      </form>
+  </div>
+  <br>
+  <h4>User Reviews</h4>
+  <div class="review-card">
+    {{#each product.reviews as |product_review|}}
+      <section class="each-card">
+        <div id="card-top">
+          <header id="review-title">{{review_title}}</header>
+          <p id="review-user">User: {{user.username}}</p>
+        </div>
+        <div class="card-body">
+          <p id="review-content">{{review}}</p>
+          <p id="review-rating">Rating: {{rating}} Star</p>
+        </div>
+      </section>
+    {{/each}}
+  </div>
+</div>
 
 <script src="/js/review.js"></script>
 
