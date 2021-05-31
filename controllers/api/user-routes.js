@@ -43,6 +43,7 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    const hashedPassword = await hashPassword(req.body.password);
     const user = await User.create({
       username: req.body.username,
       password: req.body.password,
@@ -52,9 +53,9 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = user.id;
-      req.session.loggedIn = true
+      req.session.loggedIn = true;
 
-      res.status(200).json({user: user, message: 'You are logged in!'});
+      res.status(200).json({ user: user, message: "You are logged in!" });
     });
   } catch (err) {
     res.status(500).json(err);
@@ -87,8 +88,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = data.id;
-      req.session.loggedIn = true
-  
+      req.session.loggedIn = true;
 
       res.status(200).json({ user: data, message: "You are now logged in!" });
     });
