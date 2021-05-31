@@ -25,29 +25,137 @@ body {
   content: '★ ';
 }
 .rate > input:checked ~ label {
-  color: #ffc700;    
+  color: #800020;    
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-  color: #deb217;  
+  color: #800020;  
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: #800020;
+}
+
+h4 {
+  font-family: 'Audiowide', cursive;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #800020;
+  color: black;
+}
+
+.previous {
+  background-color: gold;
+  color: black;
+  margin-right: 5px;
+  margin-left:30%
+}
+
+.next {
+  background-color: gold;
+  color: black;
+  margin-left: 5px
+}
+
+.round {
+  border-radius: 50%;
+}
+
+#box2 {
+  margin-left: 25%
+}
+
+#shoe-name {
+  font-size:25px
+}
+
+#shoe-info {
+  display: flex;
+  justify-content: space-between
 }
 
 #shoe-img {
-  float: left;
-  margin: 1%;
+  margin-top: 3%;
 }
 
 #details {
-  color: white;
+  border-style: solid;
+  border-color: #800020;
+  width: 45%;
+  color: whitesmoke;
+  margin-left: 30%;
+  margin-top: 10px
 }
 
-#box4 {
-  float: right;
+#list {
+  font-size: 18px
+}
+
+.btn {
+  background-color: #800020;
+  border-color: whitesmoke
+}
+
+.btn:hover {
+  background-color: #800020;
+  opacity:0.8
+}
+
+.review-card {
+  width:  100%;
+  min-height: 10%;
+  min-width: 35%;
+  color: var(--dark);
+}
+
+.card-body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.each-card {
+  margin-top: 10px;
+  border: 3px solid whitesmoke;
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: medium;
+  background-color: gold;
+}
+
+#card-top {
+  display: flex;
+  justify-content: space-between;
+  color: #800020;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#review-title {
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px
+}
+
+#review-user {
+  margin-right: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px
+}
+
+#review-content {
+  color: whitesmoke;
+}
+
+#review-rating {
+  text-align:right
 }

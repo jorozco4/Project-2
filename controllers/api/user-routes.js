@@ -43,12 +43,11 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const hashedPassword = await hashPassword(req.body.password);
     const user = await User.create({
-      username: req.body.username,
-      password: req.body.password,
       first_name: req.body.first_name,
       last_name: req.body.last_name,
+      username: req.body.username,
+      password: req.body.password,
     });
 
     req.session.save(() => {
