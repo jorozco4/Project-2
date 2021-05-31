@@ -1,6 +1,6 @@
 const Review = require("./Review");
 const Product = require("./Product");
-const User = require("./User");
+const User = require("./user");
 
 Review.belongsTo(Product, {
   foreignKey: "product_id",
