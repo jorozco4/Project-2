@@ -20,7 +20,7 @@ const formSubmit = async (e) => {
     const resJson = await response.json();
 
     if (response.ok) {
-      window.location.href = "/api/product/" + resJson.id;
+      window.location.href = "/product/" + resJson.id;
     } else if (!response.ok) {
       const newAdd = await fetch("api/product/new", {
         method: "POST",
@@ -38,7 +38,7 @@ const formSubmit = async (e) => {
     const newResJson = await res.json()
     
     if (res.ok) {
-    window.location.href = "/api/product/" + newResJson.id;    
+    window.location.href = "/product/" + newResJson.id;    
     } else {
     alert(res.statusText)
     }

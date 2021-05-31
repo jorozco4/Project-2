@@ -51,7 +51,8 @@ router.post("/", async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.user_id = user.id;
+      req.session.loggedIn = true
 
       res.status(200).json({user: user, message: 'You are logged in!'});
     });
@@ -61,7 +62,6 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  console.log (req.body)
   try {
     const data = await User.findOne({
       where: {
@@ -86,7 +86,9 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.user_id = data.id;
+      req.session.loggedIn = true
+  
 
       res.status(200).json({ user: data, message: "You are now logged in!" });
     });
@@ -103,6 +105,25 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const data = await User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!data) {
+      res.status(404).json({ message: "No post found with this id!" });
+      return;
+    }
+
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

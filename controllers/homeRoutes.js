@@ -9,13 +9,24 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/review", (req, res) => {
-  try {
-    res.render("review")
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+router.get("/product/:id", async (req, res) => {
+  try{
+    const data = await Product.findByPk(req.params.id, {
+       include: [
+         { model: Review,
+           include: {
+             model: User,
+             attributes: ['username']
+           }
+          },
+       ],
+     })
+     const product = data.get({ plain:true });
+      res.render('review', { product });
+     }catch(err) {
+       res.status(500).json(err)
+     }
+ });
 
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
