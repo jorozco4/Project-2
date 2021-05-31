@@ -2,66 +2,39 @@ const router = require("express").Router();
 const { Review, User, Product } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get("/", async (req, res) => {
-  try {
-    const data = await Review.findAll({
-      attributes: ["id", "review", "rating"],
-      order: [["id", "DESC"]],
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
+router.get('/', (req, res) => {
+  Review.findAll({})
+  .then((data) => res.json(data))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+})
 
-router.get("/:id", async (req, res) => {
-  try {
-    const res = await Review.findByPk(req.params.id, {
-      include: [{ model: User }],
+router.get("/:id", (req, res) => {
+  Review.findAll({
+    where: {
+    product_id: req.params.id
+    },
+    include:[{
+      model: User,
+      attributes: ['username']
+    }]
+  })
+  .then((data) => res.json(data))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
-    res.render(200).json(data);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// router.get("/:id", async (req, res) => {
-//   try {
-//     const data = await Review.findOne({
-//       where: {
-//         id: req.params.id,
-//       },
-//       attributes: ["id", "review_title", "review"],
-//       order: [["id", "DESC"]],
-//       include: [
-//         {
-//          model: User,
-//          attributes: ["username"],
-//         },
-//       ],
-//     });
-//     if (!data) {
-//       res.status(404).json({ message: "No post found with this id" });
-//     }
-//     res.status(200).json(data);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+})
 
 // TODO - Insert withAuth back in when it works
-router.post("/", (req, res) => {
-  console.log(req.body);
-  const body = req.body;
-
+router.post("/", withAuth, async (req, res) => {
   Review.create({
-    ...body,
+    review_title: req.body.review_title,
+    review: req.body.review,
+    rating: req.body.rating,
+    product_id: req.body.product_id,
     user_id: req.session.user_id,
   })
     .then((data) => res.status(200).json(data))
