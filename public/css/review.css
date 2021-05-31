@@ -146,6 +146,7 @@ a:hover {
   margin-bottom: 2px
 }
 
+
 #review-user {
   margin-right: 5px;
   margin-top: 2px;
@@ -159,3 +160,12 @@ a:hover {
 #review-rating {
   text-align:right
 }
+
+#box4 {
+  float: right;
+}
+
+#pullReviews {
+  color: white;
+}
+
