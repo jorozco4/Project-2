@@ -47,9 +47,9 @@
   
  ## Screenshots
 
-![Home Page](images\SS-Homepage.PNG)
-![Log In Page](images\SS-Login-Page.PNG)
-![Sign-Up Page](images\SS-Sign-Up.PNG)
+![SS-Homepage](https://user-images.githubusercontent.com/77691626/120229568-689da700-c21b-11eb-9f2a-c770712c4d38.PNG))
+![SS-Login-Page](https://user-images.githubusercontent.com/77691626/120229569-6b989780-c21b-11eb-8352-65b003f03ae3.PNG)
+![SS-Sign-Up](https://user-images.githubusercontent.com/77691626/120229573-6cc9c480-c21b-11eb-94f9-e06d8ed38eef.PNG)
 
   ## Questions
   
