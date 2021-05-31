@@ -41,14 +41,11 @@ body {
 
 #shoe-img {
   float: left;
+  margin: 1%;
 }
 
 #details {
-  float: left;
-  font-size: 12px;
-  padding: 11%;
-  margin-left: -125px;
-  color: #fff;
+  color: white;
 }
 
 #box4 {
