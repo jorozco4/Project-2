@@ -43,6 +43,14 @@ h4 {
   font-family: 'Audiowide', cursive;
 }
 
+h3 {
+  color: red
+}
+
+#shoeinfo {
+  display: flex
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -54,14 +62,43 @@ a:hover {
   color: black;
 }
 
+.links {
+  margin:0;
+  padding: 0;
+  color:red;
+  border: none;
+}
+
+.links:hover {
+  background-color: black;
+  color: rgb(223, 86, 86);
+  text-decoration: none
+}
+
+#amazon {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #060a77;
+  max-width: 160px;
+  line-height: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: gold;
+  border-radius: 10px;
+}
+
 .previous {
+  margin-top: 5px;
   background-color: gold;
   color: black;
   margin-right: 5px;
-  margin-left:30%
+  margin-left:43%
 }
 
 .next {
+  margin-top: 5px;
   background-color: gold;
   color: black;
   margin-left: 5px
@@ -69,10 +106,6 @@ a:hover {
 
 .round {
   border-radius: 50%;
-}
-
-#box2 {
-  margin-left: 25%
 }
 
 #shoe-name {
@@ -84,21 +117,24 @@ a:hover {
   justify-content: space-between
 }
 
-#shoe-img {
-  margin-top: 3%;
-}
-
 #details {
   border-style: solid;
   border-color: #800020;
   width: 45%;
+  max-height: 250px;
   color: whitesmoke;
-  margin-left: 30%;
-  margin-top: 10px
+  margin-left: 15px;
+  text-align: center;
+  margin-top: 7%
+}
+
+#listname{
+  margin-top: 15px
 }
 
 #list {
-  font-size: 18px
+  font-size: 18px;
+  margin-top: 10px
 }
 
 .submitbtn {
@@ -129,7 +165,7 @@ a:hover {
   border-radius: var(--border-radius);
   border-style: solid;
   border-width: medium;
-  background-color: gold;
+  background-color: rgba(255, 229, 85, 0.925);
 }
 
 #card-top {
@@ -143,7 +179,8 @@ a:hover {
 #review-title {
   margin-left: 5px;
   margin-top: 2px;
-  margin-bottom: 2px
+  margin-bottom: 2px;
+  font-size: 22px
 }
 
 
@@ -155,10 +192,14 @@ a:hover {
 
 #review-content {
   color: whitesmoke;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 18px
 }
 
 #review-rating {
-  text-align:right
+  text-align:right;
+  margin-right:10px
 }
 
 #box4 {

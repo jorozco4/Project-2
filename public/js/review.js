@@ -22,6 +22,14 @@ const back = $("#back")
    )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
+      if (data.results.length === 0) {
+        alert("No shoes exist using these search parameters. Please try another search.")
+        document.location.replace('/')
+
+
+
+      }
        img.src = data.results[0].media.smallImageUrl;
        img2.src = data.results[1].media.thumbUrl;
        $("#shoe-img").append(img);
@@ -30,7 +38,8 @@ const back = $("#back")
        $("#relDate").html("Release Date: " + data.results[0].releaseDate);       
        $("#retailPrice").html("Current Cost: $" + data.results[0].retailPrice);
        $("#colorway").html("Colorway: " + data.results[0].colorway)
-       $("#styleID").html("Style ID: " + data.results[0].styleId);
+       $("#styleID").html("Style ID: " + data.results[0].styleId)
+       $("#amazon").append("<a id=amazon href=\"https://www.amazon.com/s?k=" + userInfo.brand + "+" + userInfo.name +"&rh=n%3A679312011&ref=nb_sb_noss\">Amazon</a>")
 
       for (i = 0; i < data.results.length; i++) {
         array.push(data.results[i]);

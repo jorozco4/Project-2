@@ -1,7 +1,8 @@
 <div class="container">
   <div id="box1">
     <h4 id="shoe-name">{{name}}</h4>
-  </div>       
+  </div>
+  <div id="shoeinfo">
     <div id="box2">
       <div id="shoe-img"></div>
       <div id="shoe-btn">
@@ -10,17 +11,20 @@
       </div>
     </div>
     <div id="details">
-      <h4>Details</h4>
+      <h4 id="listname">Details</h4>
       <ul id="list">
         <li id="relDate"></li>
         <li id="retailPrice"></li>
         <li id="colorway"></li>
         <li id="styleID"></li>
+        <li id="amazon"></li>
       </ul>
     </div>
+  </div>    
   <br>
   <h4>Sumbit Review</h4>
   <div id="box3">
+    {{#if loggedIn}}
       <form class="newReview">
         <div class="rate" id="stars">                      
           <input class="stars" type="radio" id="star5" name="rating" value="5" />
@@ -42,6 +46,9 @@
         </div>
       </form>
   </div>
+  {{else}}
+    <h3><a class="links" href="/login">Login</a> or <a class="links" href="/sign-up">Sign-up</a> to Submit a Review!</h3>
+  {{/if}}
   <br>
   <h4>User Reviews</h4>
   <div class="review-card">
@@ -61,5 +68,3 @@
 </div>
 
 <script src="/js/review.js"></script>
-
-
