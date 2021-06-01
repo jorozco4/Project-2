@@ -1,18 +1,18 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 
 h1 {
-    font-size: 85px;
-    text-align: center;
-    font-family: 'Audiowide', cursive;
-    color: gold;
+  font-size: 85px;
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  color: gold;
 }
 
 .jumbotron p {
-    font-size: 20px;
-    text-align: center;
-    color: white;
+  font-size: 20px;
+  text-align: center;
+  color: white;
 }
 
 #moveBtn {
@@ -21,16 +21,16 @@ h1 {
 }
 
 #navbarNav {
-    justify-content: center;
+  justify-content: center;
 }
 
 .jumbotron {
-    background-color: #800020;
+  background-color: #800020;
 }
 
 #searchtitle {
-    color: whitesmoke;
-    text-align: center;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .btn {
@@ -54,39 +54,74 @@ h1 {
 }
 
 .home-labels {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
-    color: gold
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  color: gold;
+}
+
+footer {
+  text-align: center;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 24px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #007bb5;
+  color: white;
+}
+.homies {
+  color: black;
 }
 
 @media screen and (max-width: 992px) {
-    h1 {
-      font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
   }
-  @media screen and (max-width: 768px) {
-    .nav {
-      font-size: 12px;
-    }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    font-size: 12px;
   }
-  @media screen and (max-width: 768px) {
-    p {
-      font-size: 15px;
-    }
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 15px;
   }
-  @media screen and (max-width: 576px) {
-    .column {
-      width: 25%;
-    }
+}
+@media screen and (max-width: 576px) {
+  .column {
+    width: 25%;
   }
-  @media screen and (max-width: 992px) {
-    h2 {
-      font-size: 1rem;
-    }
+}
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 1rem;
   }
-  @media screen and (max-width: 992px) {
-    h3 {
-      font-size: 15px;
-    }
+}
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 15px;
   }
+}

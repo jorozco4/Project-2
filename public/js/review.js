@@ -39,7 +39,7 @@ const back = $("#back")
        $("#retailPrice").html("Current Cost: $" + data.results[0].retailPrice);
        $("#colorway").html("Colorway: " + data.results[0].colorway)
        $("#styleID").html("Style ID: " + data.results[0].styleId)
-       $("#amazon").append("<a id=amazon href=\"https://www.amazon.com/s?k=" + userInfo.brand + "+" + userInfo.name +"&rh=n%3A679312011&ref=nb_sb_noss\">CLICK TO VIEW PRODUCTS ON AMAZON</a>")
+       $("#amazon").append("<a id=amazon href=\"https://www.amazon.com/s?k=" + userInfo.brand + "+" + userInfo.name +"&rh=n%3A679312011&ref=nb_sb_noss\">Amazon</a>")
 
       for (i = 0; i < data.results.length; i++) {
         array.push(data.results[i]);
