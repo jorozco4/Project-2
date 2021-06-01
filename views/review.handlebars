@@ -14,6 +14,7 @@
       <ul id="list">
         <li id="relDate"></li>
         <li id="retailPrice"></li>
+        <li id="colorway"></li>
         <li id="styleID"></li>
       </ul>
     </div>
@@ -37,7 +38,7 @@
           <input class="form-control" id="review_title" name="review_title" rows="1" placeholder="Title" required></input>
           <br>
           <input class="form-control" id="review" name="review" placeholder="Review" required></input>
-          <button type="submit" class="btn btn-primary">Submit Review</button> 
+          <button type="submit" class="btn submitbtn btn-primary">Submit Review</button> 
         </div>
       </form>
   </div>
@@ -50,7 +51,7 @@
           <header id="review-title">{{review_title}}</header>
           <p id="review-user">User: {{user.username}}</p>
         </div>
-        <div class="card-body">
+        <div class="card-review">
           <p id="review-content">{{review}}</p>
           <p id="review-rating">Rating: {{rating}} Star</p>
         </div>

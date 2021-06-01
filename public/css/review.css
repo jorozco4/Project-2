@@ -101,12 +101,12 @@ a:hover {
   font-size: 18px
 }
 
-.btn {
+.submitbtn {
   background-color: #800020;
   border-color: whitesmoke
 }
 
-.btn:hover {
+.sumbitbtn:hover {
   background-color: #800020;
   opacity:0.8
 }
@@ -118,7 +118,7 @@ a:hover {
   color: var(--dark);
 }
 
-.card-body {
+.card-review {
   background-color: black;
   color: whitesmoke;
 }

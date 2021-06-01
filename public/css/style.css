@@ -28,6 +28,22 @@ h1 {
     text-align: center;
 }
 
+.btn {
+  background-color: gold;
+  color: black;
+  text-decoration: bold;
+}
+
+.btn:hover {
+  background-color: gold;
+  opacity: 0.7;
+  color: black
+}
+
+.card-body {
+  background-color: #800020;
+}
+
 .home-labels {
     text-transform: uppercase;
     font-weight: bold;
