@@ -3,7 +3,9 @@ const { Review, User, Product } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    res.render("homepage");
+    res.render("homepage", {
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -22,7 +24,9 @@ router.get("/product/:id", async (req, res) => {
        ],
      })
      const product = data.get({ plain:true });
-      res.render('review', { product });
+      res.render('review', { 
+        loggedIn: req.session.loggedIn,
+        product });
      }catch(err) {
        res.status(500).json(err)
      }

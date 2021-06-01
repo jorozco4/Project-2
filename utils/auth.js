@@ -1,8 +1,9 @@
 const withAuth = (req, res, next) => {
-  if (!req.session.loggedIn) {
-    res.redirect("/login");
-  } else {
+  if (req.session.user_id) {
     next();
+  } else {
+    req.session.error = 'Access denied!';
+    res.redirect('/login');
   }
 };
 

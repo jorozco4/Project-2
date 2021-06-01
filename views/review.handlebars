@@ -16,11 +16,13 @@
         <li id="retailPrice"></li>
         <li id="colorway"></li>
         <li id="styleID"></li>
+        <li id="amazon"></li>
       </ul>
     </div>
   <br>
   <h4>Sumbit Review</h4>
   <div id="box3">
+    {{#if loggedIn}}
       <form class="newReview">
         <div class="rate" id="stars">                      
           <input class="stars" type="radio" id="star5" name="rating" value="5" />
@@ -42,6 +44,9 @@
         </div>
       </form>
   </div>
+  {{else}}
+    <h3><a class="links" href="/login">Login</a> or <a class="links" href="/sign-up">Sign-up</a> to Submit a Review!</h3>
+  {{/if}}
   <br>
   <h4>User Reviews</h4>
   <div class="review-card">
