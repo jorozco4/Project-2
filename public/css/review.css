@@ -47,6 +47,10 @@ h3 {
   color: red
 }
 
+#shoeinfo {
+  display: flex
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -73,13 +77,12 @@ a:hover {
 
 #amazon {
   margin-top: 10px;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   font-weight: bold;
   color: #060a77;
-  width: 160px;
-  line-height: 22px;
-  width: 160px;
+  max-width: 160px;
+  line-height: 8px;
   text-align: center;
   margin-bottom: 10px;
   background-color: gold;
@@ -91,7 +94,7 @@ a:hover {
   background-color: gold;
   color: black;
   margin-right: 5px;
-  margin-left:30%
+  margin-left:43%
 }
 
 .next {
@@ -105,10 +108,6 @@ a:hover {
   border-radius: 50%;
 }
 
-#box2 {
-  margin-left: 25%
-}
-
 #shoe-name {
   font-size:25px
 }
@@ -118,21 +117,24 @@ a:hover {
   justify-content: space-between
 }
 
-#shoe-img {
-  margin-top: 3%;
-}
-
 #details {
   border-style: solid;
   border-color: #800020;
   width: 45%;
+  max-height: 250px;
   color: whitesmoke;
-  margin-left: 30%;
-  margin-top: 10px
+  margin-left: 15px;
+  text-align: center;
+  margin-top: 7%
+}
+
+#listname{
+  margin-top: 15px
 }
 
 #list {
-  font-size: 18px
+  font-size: 18px;
+  margin-top: 10px
 }
 
 .submitbtn {
