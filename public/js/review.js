@@ -15,7 +15,7 @@ const back = $("#back")
    {
        method: "GET",
       headers: {
-         "x-rapidapi-key": "0c1a9a5c52msh230a7f2d99ccc15p10ad0djsn27e4137a93bc", //0c1a9a5c52msh230a7f2d99ccc15p10ad0djsn27e4137a93bc-------13943e8640mshd73f872e7bb17cfp1a3907jsn56f6f191aa1a
+         "x-rapidapi-key": "d838877240msh4581997fdf08b6ap14f151jsnaf1bcef3ad7c", //0c1a9a5c52msh230a7f2d99ccc15p10ad0djsn27e4137a93bc-------13943e8640mshd73f872e7bb17cfp1a3907jsn56f6f191aa1a
        "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
       },
     }
