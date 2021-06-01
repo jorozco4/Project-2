@@ -18,10 +18,10 @@ const submitHandler = async (e) => {
     } else {
       alert(response.statusText)
     }
-  }
-
+  } else (
+    alert("Please fill out all fields!")
+  )
 }
 
-document
-.querySelector('.signup-class')
+document.querySelector('.signup-class')
 .addEventListener('submit', submitHandler);
