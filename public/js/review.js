@@ -53,7 +53,7 @@ const back = $("#back")
           $("#shoe-name").html(data.results[0].shoe);
           $("#relDate").html("Release Date: " + data.results[0].releaseDate);       
           $("#retailPrice").html("Current Cost: $" + data.results[0].retailPrice);
-          $("colorway").html("Colorway: " + data.results[0].colorway)
+          $("#colorway").html("Colorway: " + data.results[0].colorway)
           $("#styleID").html("Style ID: " + data.results[0].styleId);
         } else if (index < data.results.length) {
           index ++;
@@ -62,7 +62,7 @@ const back = $("#back")
           $("#shoe-name").html(array[index].shoe);
           $("#relDate").html("Release Date: " + array[index].releaseDate);       
           $("#retailPrice").html("Current Cost: $" + array[index].retailPrice);
-          $("colorway").html("Colorway: " + data.results[index].colorway)
+          $("#colorway").html("Colorway: " + array[index].colorway)
           $("#styleID").html("Style ID: " + array[index].styleId);
         }
       })
