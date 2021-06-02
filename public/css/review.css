@@ -3,40 +3,50 @@ body {
   margin-right: 4%;
 }
 
-.rate {
-  float: left;
-  height: 46px;
-  padding: 0 10px;
+.star-rating s:hover,
+.star-rating s.active {
+    color: gold;
 }
-.rate:not(:checked) > input {
-  position:absolute;
-  top:-9999px;
+.star-rating-rtl s:hover,
+.star-rating-rtl s.active {
+    color: gold;
 }
-.rate:not(:checked) > label {
-  float:right;
-  width:1em;
-  overflow:hidden;
-  white-space:nowrap;
-  cursor:pointer;
-  font-size:30px;
-  color:#ccc;
+
+.star-rating s,
+.star-rating-rtl s {
+    color: gold;
+    font-size: 50px;
+    cursor: default;
+    text-decoration: none;
+    line-height: 50px;
 }
-.rate:not(:checked) > label:before {
-  content: '★ ';
+.star-rating {
+    padding: 2px;
 }
-.rate > input:checked ~ label {
-  color: #800020;    
+.star-rating-rtl {
+    background: #555;
+    display: inline-block;
+    border: 2px solid #444;
 }
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-  color: #800020;  
+.star-rating-rtl s {
+    color: yellow;
 }
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-  color: #800020;
+.star-rating s:hover:before,
+.star-rating s.rated:before,
+.star-rating s.active:before {
+    content: "\2605";
+}
+.star-rating s:before {
+    content: "\2606";
+}
+.star-rating-rtl s:hover:after,
+.star-rating-rtl s.rated:after,
+.star-rating-rtl s.active:after {
+    content: "\2605";
+}
+
+.star-rating-rtl s:after {
+    content: "\2606";
 }
 
 h4 {

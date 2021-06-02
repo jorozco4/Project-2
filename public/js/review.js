@@ -92,12 +92,29 @@ const back = $("#back")
        console.error(err);
     });
  }
+   
+$(function(){
+ $("div.star-rating > s, div.star-rating-rtl > s").on("click", function(e) {
+
+  // remove all active classes first, needed if user clicks multiple times
+  $(this).closest('div').find('.active').removeClass('active');
+
+  $(e.target).parentsUntil("div").addClass('active'); // all elements up from the clicked one excluding self
+  $(e.target).addClass('active');  // the element user has clicked on
+
+
+      num = $(e.target).parentsUntil("div").length+1;
+      localStorage.setItem("rating", JSON.stringify(num));
+      })
+    })
 
 const renderReview = async (e) => {
   e.preventDefault()
   const review_title = document.querySelector('input[name="review_title"]').value
   const review = document.querySelector('input[name="review"]').value
-  const rating = document.querySelector('input[name="rating"]').value
+  const rating = JSON.parse(localStorage.getItem("rating"))
+
+  console.log(rating)
 
   const product_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
