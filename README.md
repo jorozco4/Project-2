@@ -1,4 +1,3 @@
-# project-2
 
 # SNEAKER HYPE
 
